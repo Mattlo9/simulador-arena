@@ -1,0 +1,17 @@
+@use 'base/variables' as v;
+
+.header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .contenido-header {
+        min-height: 8rem;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        margin: 0;
+    }
+}

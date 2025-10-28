@@ -1,0 +1,20 @@
+{
+  "name": "fallingsand",
+  "version": "1.0.0",
+  "description": "falling sand app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.93.2"
+  },
+  "dependencies": {
+    "modern-normalize": "^3.0.1",
+    "run": "^1.5.0"
+  }
+}
