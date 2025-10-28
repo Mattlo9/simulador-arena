@@ -52,10 +52,10 @@ function draw() {
 
             let state = grid[i][j]
             if (state === 1) {
-                // ¡Elige tu color para la arena aquí!
+                
                 ctx.fillStyle = 'rgb(230, 190, 138)'; // Un color arena
             } else {
-                // Es 0 (vacío), usa el color de fondo
+                
                 ctx.fillStyle = 'rgb(0, 0, 0)';
             }
 
@@ -125,7 +125,7 @@ function addSand(event) {
     const Mousecol = Math.floor(mouseX / w);
     const Mouserow = Math.floor(mouseY / w);
 
-    let matrix = 2;
+    let matrix = 1;
     let extent = Math.floor(matrix/2); 
 
     for (let i = -extent; i <= extent; i++) {
