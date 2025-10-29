@@ -31,13 +31,9 @@ function setup() {
     rows = canvas.height / w; //Largo
     cols = canvas.width / w; //Ancho
 
-    grid = Crear2dArray(rows, cols);
-    for (let i = 0; i < grid.length; i++) {
-        for (let j = 0; j < grid[i].length; j++) {
-            grid[i][j] = 0 //Para pintar las cuadriculas
-        } 
-    }
-    requestAnimationFrame(draw)
+
+    resetGrid();
+    requestAnimationFrame(draw);
 }
 
 function draw() {
@@ -56,7 +52,7 @@ function draw() {
                 ctx.fillStyle = 'rgb(230, 190, 138)'; // Un color arena
             } else {
                 
-                ctx.fillStyle = 'rgb(0, 0, 0)';
+                ctx.fillStyle = 'rgba(37, 35, 35, 1)';
             }
 
             ctx.fillRect(x, y, w, w);
@@ -142,5 +138,19 @@ function addSand(event) {
     
 }
 
+function resetGrid() {
+    grid = Crear2dArray(rows,cols);
+}
 
-window.onload = setup;
+function boton() {
+    const boton = document.getElementById('btn')
+    boton.addEventListener('click', function() {
+        resetGrid()
+    });
+}
+
+
+window.onload = function() {
+    setup();
+    boton();
+}
